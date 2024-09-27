@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Prog 1 - Week 8</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/dracula.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/dracula.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>41039 Programming 1</h3>
+					<h4>Week 8</h4>
+					<h5 style="color: yellow;">Zohair Gandhi</h5>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Java Interfaces</h3>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Java Interfaces</h3>
+
+					<ul>
+						<li>Set of classes that share methods</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Java Interfaces</h3>
+
+					<ul>
+						<li>Set of classes that share methods</li>
+						<li>Declare an <span style="color: yellow;">interface</span> with the common methods</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate>
+					<h3>Java Interfaces</h3>
+
+					<ul>
+						<li>Set of classes that share methods</li>
+						<li>Declare an <span style="color: yellow;">interface</span> with the common methods</li>
+						<li>Can use the interface, without knowing an object's specific type</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Interfaces: Animal</h3>
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						interface Animal {
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Interfaces: Animal</h3>
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						interface Animal {
+							public void animalSound();
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Interfaces: Animal</h3>
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						interface Animal {
+							public void animalSound();
+							public void run();
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+
+					Implementations provide complete methods
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+
+					Implementations provide complete methods
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						class Dog {
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+
+					Implementations provide complete methods
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						class Dog implements Animal {
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+
+					Implementations provide complete methods
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						class Dog implements Animal {
+							public void animalSound() {
+								// The body of animalSound() is provided here
+							}
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Implementing Interfaces</h3>
+
+					Implementations provide complete methods
+
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+						class Dog implements Animal {
+							public void animalSound() {
+								// The body of animalSound() is provided here
+								System.out.println("The dog says: woof woof");
+							}
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Interface Notes</h3>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Interface Notes</h3>
+
+					<ul>
+						<li>Only have methods</li>
+					</ul>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Interface Notes</h3>
+
+					<ul>
+						<li>Only have methods</li>
+						<li>Do not provide code, only the definition (called <span style="color: yellow;">signatures</span>)</li>
+					</ul>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Interface Notes</h3>
+
+					<ul>
+						<li>Only have methods</li>
+						<li>Do not provide code, only the definition (called <span style="color: yellow;">signatures</span>)</li>
+						<li>A class can implement any number of interfaces</li>
+					</ul>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Very <span style="color: yellow;">Very</span> Basic Inheritance</h3>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Very <span style="color: yellow;">Very</span> Basic Inheritance</h3>
+
+					Making a game
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Very <span style="color: yellow;">Very</span> Basic Inheritance</h3>
+
+					Making a game
+
+					<pre><code data-trim data-line-numbers="1,13|2-4|6-8|10-12">
+						public class Dude {
+							public String name;
+							public int hp = 100;
+							public int mp = 0;
+
+							public void sayName() {
+								System.out.println(name);
+							}
+
+							public void punchFace(Dude target) {
+								target.hp -= 10;
+							}
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Inheritance...</h3>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Inheritance...</h3>
+
+					Now create a Wizard
+				</section>
+
+				<section data-auto-animate>
+					<h3>Inheritance...</h3>
+
+					Now create a Wizard
+
+					<pre><code data-trim data-line-numbers>
+						public class Wizard {
+							// ugh, gotta copy and paste Dude's stuff
+						}
+					</code></pre>
+				</section>
+				
+				<section data-auto-animate>
+					<h3>Inheritance...</h3>
+
+					Now create a Wizard
+
+					<h4 style="margin-top: 0.5lh;">But wait!</h4>
+					<h4>A Wizard does and has everything a Dude does and has!</h4>
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+
+					Wizard is a <span style="color: yellow;">subclass</span> of Dude
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+
+					Wizard is a <span style="color: yellow;">subclass</span> of Dude
+
+					<pre><code data-trim data-line-numbers>
+						public class Wizard extends Dude {
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+
+					<ul>
+						<li>
+							Wizard can use everything<sup>1</sup> the Dude has!
+							<pre><code data-trim="">
+								wizard1.hp += 1;
+							</code></pre>
+						</li>
+					</ul>
+
+					<footer style="font-size: x-large;"><sup>1</sup>except for private fields and methods</footer>
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+
+					<ul>
+						<li>
+							Wizard can use everything<sup>1</sup> the Dude has!
+							<pre><code data-trim="">
+								wizard1.hp += 1;
+							</code></pre>
+						</li>
+						<li>
+							Wizard can do everything<sup>1</sup> the Dude can do!
+							<pre><code data-trim="">
+								wizard1.punchFace(dude1);
+							</code></pre>
+						</li>
+					</ul>
+
+					<footer style="font-size: x-large;"><sup>1</sup>except for private fields and methods</footer>
+				</section>
+
+				<section data-auto-animate>
+					<h3>By Inheritance!</h3>
+
+					<ul>
+						<li>
+							Wizard can use everything<sup>1</sup> the Dude has!
+							<pre><code data-trim="">
+								wizard1.hp += 1;
+							</code></pre>
+						</li>
+						<li>
+							Wizard can do everything<sup>1</sup> the Dude can do!
+							<pre><code data-trim="">
+								wizard1.punchFace(dude1);
+							</code></pre>
+						</li>
+						<li>
+							You can use a Wizard like a Dude too!
+							<pre><code data-trim="">
+								dude1.punchFace(wizard1);
+							</code></pre>
+						</li>
+					</ul>
+
+					<footer style="font-size: x-large;"><sup>1</sup>except for private fields and methods</footer>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>By Inheritance!</h3>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>By Inheritance!</h3>
+
+					Now augment a Wizard
+				</section>
+
+				<section data-auto-animate="">
+					<h3>By Inheritance!</h3>
+
+					Now augment a Wizard
+
+					<pre><code data-trim="" data-line-numbers="1,9|2|3-8">
+						<script type="text/template">
+							public class Wizard extends Dude {
+								ArrayList<Spell> spells;
+								public void cast(String spell) {
+									// cool stuff here
+									...
+									mp -= 10;
+								}
+							}
+						</script>
+					</code></pre>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheriting from inherited classes</h3>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheriting from inherited classes</h3>
+
+					What about a Grand Wizard?
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheriting from inherited classes</h3>
+
+					What about a Grand Wizard?
+
+					<pre><code data-trim="" data-line-numbers="">
+						public class GrandWizard extends Wizard {
+							@Override
+							public void sayName() {
+								System.out.println("Grand wizard" + name);
+							}
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code>class A extends B</code></pre> means that A is a subclass of B</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code>class A extends B</code></pre> means that A is a subclass of B</li>
+						<li>A has all the fields and methods that B has</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code>class A extends B</code></pre> means that A is a subclass of B</li>
+						<li>A has all the fields and methods that B has</li>
+						<li>A can add its own fields and methods</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code>class A extends B</code></pre> means that A is a subclass of B</li>
+						<li>A has all the fields and methods that B has</li>
+						<li>A can add its own fields and methods</li>
+						<li>In <span style="color: yellow;">Java</span>, A can only have 1 parent</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code data-trim="">class A extends B</code></pre> means that A is a subclass of B</li>
+						<li>A has all the fields and methods that B has</li>
+						<li>A can add its own fields and methods</li>
+						<li>In <span style="color: yellow;">Java</span>, A can only have 1 parent</li>
+						<li>A can replace a parent's method by re-implementing it</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate="">
+					<h3>Inheritance Summary</h3>
+
+					<ul>
+						<li><pre><code>class A extends B</code></pre> means that A is a subclass of B</li>
+						<li>A has all the fields and methods that B has</li>
+						<li>A can add its own fields and methods</li>
+						<li>In <span style="color: yellow;">Java</span>, A can only have 1 parent</li>
+						<li>A can replace a parent's method by re-implementing it</li>
+						<li>If A doesn't implement something, the ancestors are searched</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
